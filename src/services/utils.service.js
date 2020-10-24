@@ -6,5 +6,5 @@ export function randomEnum(enumObj) {
 }
 
 export function isInRange(min, max, num) {
-    return num >= min && num <= max;
+    return num >= min && num < max;
 }
