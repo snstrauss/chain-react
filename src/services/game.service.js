@@ -42,7 +42,7 @@ function getValidNeighbor(row, col, board) {
 export function getCellNeighbors(cell, board) {
 
     const possibleSides = {
-        top: getValidNeighbor(cell.row - 1, cell.col, board),
+        top: getValidNeighbor(cell.row - 1, cell.column, board),
         bottom: getValidNeighbor(cell.row + 1, cell.column, board),
         left: getValidNeighbor(cell.row, cell.column - 1, board),
         right: getValidNeighbor(cell.row, cell.column + 1, board)
