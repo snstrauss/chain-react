@@ -7,7 +7,7 @@ export default function Cell({ cell }) {
     const { methods: gameMethods } = useContext(GameContext);
 
     const cellStyle = {
-        transform: `rotate(${cell.turn}deg)`
+        transform: `rotate(${cell.visualTurn}deg)`
     }
 
     function initiateChain() {

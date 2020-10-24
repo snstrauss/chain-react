@@ -14,10 +14,12 @@ const TURNS = {
 };
 
 function createNewCell(rowIdx, cellIdx) {
+    const turn = randomEnum(TURNS);
     return {
         row: rowIdx,
         column: cellIdx,
-        turn: randomEnum(TURNS)
+        visualTurn: turn,
+        turn,
     }
 }
 
@@ -59,7 +61,8 @@ export function getCellNeighbors(cell, board) {
 
 export function turnCell(cell) {
     cell.turn += TURN;
-    if (cell.turn === 360) {
+    cell.visualTurn += TURN;
+    if (cell.turn >= 360) {
         cell.turn = 0;
     }
 }
