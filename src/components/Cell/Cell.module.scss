@@ -1,0 +1,31 @@
+.container {
+    // border: 2px solid teal;
+    position: relative;
+
+    flex: 1;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+
+    .circle {
+        --size: 10vw
+        ;
+        border: 1px solid red;
+        border-radius: 100%;
+        width: var(--size);
+        height: var(--size);
+
+        transition: transform 1s linear;
+
+        .inner {
+            width: 50%;
+            height: 50%;
+
+            --border: 1px solid blue;
+
+            border-right: var(--border);
+            border-bottom: var(--border);
+        }
+    }
+}
